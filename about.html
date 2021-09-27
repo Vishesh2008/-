@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Me</title>
+    <!-- tailwindcss -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.0.2/tailwind.min.css" rel="stylesheet">
+    <!-- alpinejs -->
+    <script src="//unpkg.com/alpinejs" defer></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Birthstone&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@600&display=swap" rel="stylesheet">
+</head>
+<style>
+    html{
+        scroll-behavior: smooth;
+    }
+    .shadow_v{
+        box-shadow: 6.5px 6.5px 8px #6366F1;
+    }
+</style>
+<body x-data="data()" class="relative bg-gradient-to-r from-blue-800 via-indigo-800 to-purple-800 relative">
+    <!-- Nav Bar -->
+    <div class="flex justify-between items-center font-bold pt-5 pb-5 text-white bg-black">
+        <a href="#" class="ml-28 text-3xl tracking-widest" style="font-family: 'Birthstone', cursive;">Vishesh Adarshi</a>
+        <div class="space-x-20 mr-20 text-md">
+            <a href="index.html" class="transition duration-500 hover:text-green-500 font-semibold">Home</a>
+            <a href="about.html" class="hover:text-green-500 transition duration-500 font-semibold">About Me</a>
+            <span class="hover:text-green-500 transition duration-500">
+                <button class="font-semibold focus:outline-none" @click="dropdown = !dropdown;">Blog</button>
+                <svg xmlns="http://www.w3.org/2000/svg" :class="dropdown ? 'invisible' : 'visible'" class="cursor-pointer h-5 w-5 absolute right-56 top-7" viewBox="0 0 20 20" fill="currentColor">
+                    <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
+                </svg>
+                <svg xmlns="http://www.w3.org/2000/svg" :class="dropdown ? 'visible' : 'invisible'" class="cursor-pointer absolute h-5 w-5 right-56 top-7" viewBox="0 0 20 20" fill="currentColor">
+                    <path fill-rule="evenodd" d="M14.707 12.707a1 1 0 01-1.414 0L10 9.414l-3.293 3.293a1 1 0 01-1.414-1.414l4-4a1 1 0 011.414 0l4 4a1 1 0 010 1.414z" clip-rule="evenodd" />
+                </svg>
+            </span>
+            <a href="contact.html" class="hover:text-green-500 transition duration-500 font-semibold">Get in Touch</a>
+        </div>
+    </div>
+    <div x-show="dropdown" class="w-48 absolute right-28 z-10 top-16">
+        <a href="ReadBlog.html">
+            <div class="py-2 transition duration-500 hover:bg-purple-500 hover:text-white text-center bg-white w-48 border-b border-black">Read Blogs</div>
+        </a>
+        <a href="WriteBlog.html">
+            <div class="py-2 transition duration-500 hover:bg-purple-500 hover:text-white bg-white w-48 text-black text-center">Write Blog</div>
+        </a>
+    </div>
+    <!-- Main Body -->
+    <!-- Hero -->
+    <div class="text-white flex" id="about">
+        <div class="m-24 ml-32 w-2/4">
+            <div class="text-md font-semibold tracking-widest">HELLO, MY NAME IS</div>
+            <div class="text-6xl font-bold mt-4" style="font-family: 'Source Sans Pro', sans-serif;">VISHESH ADARSHI</div>
+            <div class="text-lg tracking-wider mt-2 font-semibold">FRONTEND DEVELOPER | ML ENTUSIAST</div>
+            <div style="width: 30rem;" class="mt-5 text-md tracking-wider">I like to learn new things about data science and machine learning. I also like to develope good looking websites with powerful backend and efficient data base. This is my portfolio here you will come to know more <a href="about.html" class="hover:underline">about me</a>. You can also write a <a href="blog.html" class="hover:underline">blog</a>. If any problem related to website you can also <a href="contact.html" class="hover:underline">contact me</a>. Let me tell you more about this website. This website I have made using 3 Technologies. The First is HTML which is used for structuring the web page. Tailwindcss used to style the webpage. and AlpineJS used to make the web page interactive. This website is made by a lot a efforts. I hope you like it.</div>
+        </div>
+        <div class="bg-white">
+            <img src="assets/images/me.jpeg" alt="" class="absolute right-0 border-4" style="width: 27.35rem; border-bottom-left-radius: 25%;">
+        </div>
+    </div>
+    <div class="text-4xl text-white font-thin absolute bottom-80 left-24">
+        My Skills
+    </div>
+    <div class="ml-80">
+        <div class="">
+            <div class="absolute left-56 font-semibold text-white">Python</div>
+            <div style="width: 32rem;" class="h-6 bg-gray-200 rounded-full mt-64">
+                <div class="rounded-full w-8/12 h-6 rounded-full bg-gradient-to-r from-blue-500 to-green-500"></div>
+            </div>
+        </div>
+        <div class="">
+            <div class="absolute left-56 font-semibold text-white">Tailwindcss</div>
+            <div style="width: 32rem;" class="h-6 bg-gray-200 rounded-full mt-4">
+                <div class="rounded-full w-11/12 h-6 rounded-full bg-gradient-to-r from-blue-500 to-green-500"></div>
+            </div>
+        </div>
+        <div class="">
+            <div class="absolute left-56 font-semibold text-white">AlpineJS</div>
+            <div style="width: 32rem;" class="h-6 bg-gray-200 rounded-full mt-4">
+                <div class="rounded-full w-10/12 h-6 rounded-full bg-gradient-to-r from-blue-500 to-green-500"></div>
+            </div>
+        </div>
+        <div class="">
+            <div class="absolute left-56 font-semibold text-white">C/C++</div>
+            <div style="width: 32rem;" class="h-6 bg-gray-200 rounded-full mt-4">
+                <div class="rounded-full w-6/12 h-6 rounded-full bg-gradient-to-r from-blue-500 to-green-500"></div>
+            </div>
+        </div>
+        <div class="">
+            <div class="absolute left-56 font-semibold text-white">JavaScript</div>
+            <div style="width: 32rem;" class="h-6 bg-gray-200 rounded-full mt-4">
+                <div class="rounded-full w-7/12 h-6 rounded-full bg-gradient-to-r from-blue-500 to-green-500"></div>
+            </div>
+        </div>
+    </div>
+    <div class="">
+        <div class="text-white text-center mt-16">&copy; 2021 | Vishesh Adarshi | Frontend Developer</div>
+    </div>
+    <script>
+        function data() {
+            return {
+                dropdown: false,
+            };
+        }
+    </script>
+</body>
+</html>
